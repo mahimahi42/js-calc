@@ -32,6 +32,35 @@ $(document).ready(function() {
 		});
 	});
 
+	$("div#equals").click(function() {
+		switch (operator) {
+			case "+":
+				var res = add(operands[0], operands[1]);
+				console.log(res);
+				operands = [];
+				operator = "";
+				break;
+			case "-":
+				var res = subtract(operands[0], operands[1]);
+				console.log(res);
+				operands = [];
+				operator = "";
+				break;
+			case "*":
+				var res = multiply(operands[0], operands[1]);
+				console.log(res);
+				operands = [];
+				operator = "";
+				break;
+			case "/":
+				var res = divide(operands[0], operands[1]);
+				console.log(res);
+				operands = [];
+				operator = "";
+				break;
+		}
+	});
+
 	$("div#clear").click(function() {
 		operands = [];
 		operator = "";
