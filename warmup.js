@@ -10,3 +10,21 @@ var my_max = function(arr) {
     
 	return max;
 };
+
+var vowel_count = function(str) {
+	vowels = 0;
+	var is_vowel = function(c) {
+		if (c === "a" || c === "e" || c === "i" || c === "o" || c === "u") {
+			return true;
+		}
+		return false;
+	};
+	length = str.length;
+
+	for (var i = 0; i < length; i++) {
+		if (is_vowel(str[i])) {
+			vowels++;
+		}
+	}
+	return vowels;
+};
