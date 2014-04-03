@@ -10,3 +10,32 @@ var divide = function(x, y) {
 	}
 	return x / y;
 };
+
+$(document).ready(function() {
+	var operands = [];
+	var operator;
+	$("div[id=num]").each(function() {
+		var tmp = $(this).text();
+		$(this).click(function() {
+			console.log(tmp);
+			operands.push(parseInt(tmp));
+			console.log(operands.toString());
+		});
+	});
+
+	$("div[id=operator]").each(function() {
+		var tmp = $(this).text();
+		$(this).click(function() {
+			console.log(tmp);
+			operator = tmp;
+			console.log(operator);
+		});
+	});
+
+	$("div#clear").click(function() {
+		operands = [];
+		operator = "";
+		console.log(operands.toString());
+		console.log(operator);
+	});
+});
