@@ -28,3 +28,14 @@ var vowel_count = function(str) {
 	}
 	return vowels;
 };
+
+var reverse = function(str) {
+	ret = "";
+	length = str.length;
+
+	for (var i = length - 1; i >= 0; i--) {
+		ret += str[i];
+	}
+
+	return ret;
+};
